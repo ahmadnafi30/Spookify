@@ -1,12 +1,15 @@
 public class Musik{
     private String judul, genre, tahun, artist, pencipta;
-
+    public String jenisLagu, filePath;
+    
+    public Musik(){}
     public Musik(String judul, String genre, String tahun, String artist, String pencipta) {
         this.judul = judul;
         this.genre = genre;
         this.tahun = tahun;
         this.artist = artist;
         this.pencipta = pencipta;
+        this.jenisLagu = (Integer.parseInt(tahun) < 2020)? "Old School" : "New School";
     }
 
     public String getJudul() {
@@ -49,5 +52,14 @@ public class Musik{
         this.pencipta = pencipta;
     }
 
+    public String toString(){
+        return 
+        "Jenis Lagu : " + this.jenisLagu + "\n" +
+        "Judul      : " + this.judul + " \n" + 
+        "Genre      : " + this.genre + " \n" + 
+        "Tahun      : " + this.tahun + " \n" + 
+        "Artist     : " + this.artist + " \n" + 
+        "Pencipta   : " + this.pencipta;
+    }
     
 }

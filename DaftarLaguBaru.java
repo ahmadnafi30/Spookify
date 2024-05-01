@@ -1,16 +1,14 @@
-public class DaftarLaguBaru extends DaftarLagu {
+public class DaftarLaguBaru extends DaftarLaguSpookify {
     
     public DaftarLaguBaru() {
         super();
     }
 
-    @Override
-    public void tambahMusik(Musik m){
-        // Musik data = new Musik() {};
-        if(m instanceof MusicNewSchool){
+    // @Override
+    static public void tambahMusik(Musik m){
             list.add(m);
-        }
-    }
-
+        
+    } 
+    
     
 }
